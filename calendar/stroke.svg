@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 16 16">
+  <!-- Generator: Adobe Illustrator 30.0.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 123)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <rect class="st0" x="1" y="2.3" width="14" height="12.7" rx="2.2" ry="2.2"/>
+  <line class="st0" x1="1" y1="6.5" x2="15" y2="6.5"/>
+  <line class="st0" x1="11.3" y1="3.6" x2="11.3" y2="1"/>
+  <line class="st0" x1="4.7" y1="3.6" x2="4.7" y2="1"/>
+</svg>

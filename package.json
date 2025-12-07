@@ -1,0 +1,24 @@
+{
+  "name": "nice-icons",
+  "version": "1.0.0",
+  "description": "A collection of SVG icons with stroke and fill variants",
+  "main": "index.js",
+  "author": "Nice Prototypes",
+  "license": "MIT",
+  "keywords": [
+    "icons",
+    "svg",
+    "nice-icons"
+  ],
+  "files": [
+    "icons",
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nice-prototypes/nice-icons"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
