@@ -11,7 +11,8 @@
     "nice-icons"
   ],
   "files": [
-    "icons",
+    "*/stroke.svg",
+    "*/fill.svg",
     "index.js"
   ],
   "repository": {
