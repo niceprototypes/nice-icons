@@ -3,6 +3,13 @@
   "version": "1.1.0",
   "description": "A collection of SVG icons with stroke and fill variants",
   "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/generateIndex.js",
+    "dev": "node scripts/generateIndex.js --watch",
+    "prepublishOnly": "npm run build",
+    "prepare": "npm run build"
+  },
   "author": "Nice Prototypes",
   "license": "MIT",
   "keywords": [
@@ -21,5 +28,8 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "peerDependencies": {},
+  "devDependencies": {},
+  "dependencies": {}
 }
