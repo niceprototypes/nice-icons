@@ -1,5 +1,11 @@
-export { default as ArrowStrokeIcon } from "./arrow/stroke.svg";
-export { default as ArrowFillIcon } from "./arrow/fill.svg";
+export { default as ArrowBottomStrokeIcon } from "./arrow-bottom/stroke.svg";
+export { default as ArrowBottomFillIcon } from "./arrow-bottom/fill.svg";
+export { default as ArrowLeftStrokeIcon } from "./arrow-left/stroke.svg";
+export { default as ArrowLeftFillIcon } from "./arrow-left/fill.svg";
+export { default as ArrowRightStrokeIcon } from "./arrow-right/stroke.svg";
+export { default as ArrowRightFillIcon } from "./arrow-right/fill.svg";
+export { default as ArrowTopStrokeIcon } from "./arrow-top/stroke.svg";
+export { default as ArrowTopFillIcon } from "./arrow-top/fill.svg";
 export { default as AttentionStrokeIcon } from "./attention/stroke.svg";
 export { default as AttentionFillIcon } from "./attention/fill.svg";
 export { default as BoxStrokeIcon } from "./box/stroke.svg";
@@ -10,8 +16,14 @@ export { default as CalendarStrokeIcon } from "./calendar/stroke.svg";
 export { default as CalendarFillIcon } from "./calendar/fill.svg";
 export { default as CancelStrokeIcon } from "./cancel/stroke.svg";
 export { default as CancelFillIcon } from "./cancel/fill.svg";
-export { default as CaratStrokeIcon } from "./carat/stroke.svg";
-export { default as CaratFillIcon } from "./carat/fill.svg";
+export { default as CaratBottomStrokeIcon } from "./carat-bottom/stroke.svg";
+export { default as CaratBottomFillIcon } from "./carat-bottom/fill.svg";
+export { default as CaratLeftStrokeIcon } from "./carat-left/stroke.svg";
+export { default as CaratLeftFillIcon } from "./carat-left/fill.svg";
+export { default as CaratRightStrokeIcon } from "./carat-right/stroke.svg";
+export { default as CaratRightFillIcon } from "./carat-right/fill.svg";
+export { default as CaratTopStrokeIcon } from "./carat-top/stroke.svg";
+export { default as CaratTopFillIcon } from "./carat-top/fill.svg";
 export { default as CheckStrokeIcon } from "./check/stroke.svg";
 export { default as CheckFillIcon } from "./check/fill.svg";
 export { default as CloudStrokeIcon } from "./cloud/stroke.svg";
@@ -60,13 +72,19 @@ export { default as XStrokeIcon } from "./x/stroke.svg";
 export { default as XFillIcon } from "./x/fill.svg";
 
 export const iconNames = [
-  "arrow",
+  "arrow-bottom",
+  "arrow-left",
+  "arrow-right",
+  "arrow-top",
   "attention",
   "box",
   "brush",
   "calendar",
   "cancel",
-  "carat",
+  "carat-bottom",
+  "carat-left",
+  "carat-right",
+  "carat-top",
   "check",
   "cloud",
   "code",
