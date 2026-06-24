@@ -36,6 +36,8 @@ export { default as ContactStrokeIcon } from "./contact/stroke.svg";
 export { default as ContactFillIcon } from "./contact/fill.svg";
 export { default as ContentStrokeIcon } from "./content/stroke.svg";
 export { default as ContentFillIcon } from "./content/fill.svg";
+export { default as CopyStrokeIcon } from "./copy/stroke.svg";
+export { default as CopyFillIcon } from "./copy/fill.svg";
 export { default as EditStrokeIcon } from "./edit/stroke.svg";
 export { default as EditFillIcon } from "./edit/fill.svg";
 export { default as LinkStrokeIcon } from "./link/stroke.svg";
@@ -91,6 +93,7 @@ export const iconNames = [
   "cog",
   "contact",
   "content",
+  "copy",
   "edit",
   "link",
   "lock",
