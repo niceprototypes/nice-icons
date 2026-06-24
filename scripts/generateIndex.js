@@ -15,6 +15,7 @@ import * as fs from "fs"
 import * as path from "path"
 import { fileURLToPath } from "url"
 import { dirname } from "path"
+import { scrubSvgFile } from "./scrubSvg.js"
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
@@ -90,6 +91,28 @@ function generateIndexContent(iconDirs) {
 }
 
 /**
+ * Scrub every icon SVG in place (strip Adobe artifacts, apply semantic classes
+ * from svgStyle.config.js). Write-only-on-change, so already-clean files are
+ * skipped. Returns the number of files rewritten.
+ */
+function scrubAllIcons() {
+  let count = 0
+  for (const iconName of getIconDirs()) {
+    for (const variant of ["stroke.svg", "fill.svg"]) {
+      const filePath = path.join(rootDir, iconName, variant)
+      if (!fs.existsSync(filePath)) continue
+      try {
+        if (scrubSvgFile(filePath)) count++
+      } catch (err) {
+        console.error(`✗ Scrub failed for ${iconName}/${variant}: ${err.message}`)
+      }
+    }
+  }
+  if (count) console.log(`✓ Scrubbed ${count} SVG file(s)`)
+  return count
+}
+
+/**
  * Write index.js file
  */
 function writeIndex() {
@@ -106,6 +129,7 @@ function writeIndex() {
  */
 function watchMode() {
   console.log("Watching for icon changes...")
+  scrubAllIcons()
   writeIndex()
 
   // Watch for directory changes (new icons added/removed)
@@ -136,6 +160,17 @@ function watchMode() {
     const iconPath = path.join(rootDir, iconName)
     fs.watch(iconPath, (eventType, filename) => {
       if (filename && filename.endsWith(".svg")) {
+        // Scrub the just-saved file. Writing a cleaned version triggers one more
+        // change event, but the scrub is idempotent so that pass is a no-op
+        // (identical content -> no write -> no further event): no loop.
+        const filePath = path.join(iconPath, filename)
+        try {
+          if (fs.existsSync(filePath) && scrubSvgFile(filePath)) {
+            console.log(`✓ Scrubbed ${iconName}/${filename}`)
+          }
+        } catch (err) {
+          console.error(`✗ Scrub failed for ${iconName}/${filename}: ${err.message}`)
+        }
         console.log(`SVG changed: ${iconName}/${filename}`)
         writeIndex()
       }
@@ -148,5 +183,6 @@ const args = process.argv.slice(2)
 if (args.includes("--watch")) {
   watchMode()
 } else {
+  scrubAllIcons()
   writeIndex()
 }

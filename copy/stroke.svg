@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 10.4 10.4">
-  <!-- Generator: Adobe Illustrator 30.5.1, SVG Export Plug-In . SVG Version: 2.1.4 Build 3)  -->
-  <defs>
-    <style>
-      .st0 {
-        fill: none;
-      }
-    </style>
-  </defs>
-  <path class="st0" d="M0,0h9.4c.6,0,1,.4,1,1v9.4"/>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 16 16">
+  <style>.no-fill{fill:none}.stroke{stroke:currentColor;stroke-width:1.5px;stroke-linecap:round;stroke-linejoin:round}</style>
+  <path class="no-fill stroke" d="M5,1h8.5c.8,0,1.5.7,1.5,1.5v8.5"/>
+  <rect class="no-fill stroke" x="1" y="4" width="11" height="11" rx="1.5" ry="1.5"/>
 </svg>
