@@ -52,6 +52,8 @@ export const ContentBaseIcon: SvgComponent;
 export const ContentFillIcon: SvgComponent;
 export const CopyBaseIcon: SvgComponent;
 export const CopyFillIcon: SvgComponent;
+export const DesktopBaseIcon: SvgComponent;
+export const DesktopFillIcon: SvgComponent;
 export const DiscordBaseIcon: SvgComponent;
 export const DiscordFillIcon: SvgComponent;
 export const DownloadBaseIcon: SvgComponent;

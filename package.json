@@ -1,6 +1,6 @@
 {
   "name": "nice-icons",
-  "version": "1.2.1",
+  "version": "2.0.0",
   "description": "A collection of SVG icons with stroke and fill variants",
   "main": "src/generated/index.js",
   "types": "src/generated/index.d.ts",

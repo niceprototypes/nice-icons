@@ -48,6 +48,8 @@ export { default as ContentBaseIcon } from "./content/base.svg";
 export { default as ContentFillIcon } from "./content/fill.svg";
 export { default as CopyBaseIcon } from "./copy/base.svg";
 export { default as CopyFillIcon } from "./copy/fill.svg";
+export { default as DesktopBaseIcon } from "./desktop/base.svg";
+export { default as DesktopFillIcon } from "./desktop/fill.svg";
 export { default as DiscordBaseIcon } from "./discord/base.svg";
 export { default as DiscordFillIcon } from "./discord/fill.svg";
 export { default as DownloadBaseIcon } from "./download/base.svg";

@@ -24,6 +24,7 @@ export const iconNames: readonly [
   "contact",
   "content",
   "copy",
+  "desktop",
   "discord",
   "download",
   "edit",
