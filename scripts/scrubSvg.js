@@ -9,9 +9,9 @@
  * avoid a write/rewrite loop).
  *
  * ## Usage
- * - Programmatic: `scrubSvg(content, "stroke" | "fill") -> string`
- * - CLI (stdout):  `node scripts/scrubSvg.js box/stroke.svg`
- * - CLI (in place): `node scripts/scrubSvg.js box/stroke.svg --write`
+ * - Programmatic: `scrubSvg(content, "base" | "fill" | …) -> string`
+ * - CLI (stdout):  `node scripts/scrubSvg.js box/base.svg`
+ * - CLI (in place): `node scripts/scrubSvg.js box/base.svg --write`
  *
  * @module scrub-svg
  */
@@ -40,11 +40,15 @@ function buildStyleBody(classNames) {
 }
 
 /**
- * Derive the variant key ("stroke" | "fill") from a file path or name.
- * Defaults to "fill" for anything that isn't explicitly a stroke file.
+ * Derive the variant key from a file path or name — the svg filename stem
+ * (`base.svg` → "base", `fill.svg` → "fill", `3d.svg` → "3d"). Variants are
+ * open-ended; the stem is looked up in svgStyle.config's `variants`, and a stem
+ * with no entry there gets no semantic classes (artifact-scrub only). Defaults to
+ * "base" when no stem can be read.
  */
 export function variantFromFilename(file) {
-  return /stroke\.svg$/.test(file) ? "stroke" : "fill"
+  const match = /([^/\\]+)\.svg$/i.exec(file)
+  return match ? match[1] : "base"
 }
 
 /**
@@ -63,6 +67,45 @@ export function scrubSvg(content, variant) {
   svg = svg.replace(/\s+id="Layer_1"/g, "")
   // 4. Drop every existing class attribute (Adobe's .st… assignments).
   svg = svg.replace(/\s+class="[^"]*"/g, "")
+
+  // 4b. Strip pdf2svg (Poppler) export artifacts. The AI→pdf2svg pipeline emits
+  //     pt-unit width/height, an unused xlink namespace, and hardcoded
+  //     presentation attributes (rgb() colors, opacity, miterlimit, and the
+  //     stroke width/caps the semantic classes already provide). Removing them
+  //     is a pure string strip — coordinates and `transform` matrices are left
+  //     untouched, so geometric precision is preserved. `fill-rule` is kept (it
+  //     controls compound-fill holes). Idempotent: no-op on already-clean icons.
+  svg = svg
+    .replace(/\s+xmlns:xlink="[^"]*"/g, "")
+    .replace(/\s+(?:width|height)="[0-9.]+pt"/g, "")
+    .replace(/\s+fill="none"/g, "")
+    .replace(/\s+fill="rgb\([^)]*\)"/g, "")
+    .replace(/\s+fill-opacity="[0-9.]+"/g, "")
+    .replace(/\s+stroke="none"/g, "")
+    .replace(/\s+stroke="rgb\([^)]*\)"/g, "")
+    .replace(/\s+stroke-opacity="[0-9.]+"/g, "")
+    .replace(/\s+stroke-miterlimit="[0-9.]+"/g, "")
+    .replace(/\s+stroke-width="[0-9.]+(?:px)?"/g, "")
+    .replace(/\s+stroke-linecap="[a-z]+"/g, "")
+    .replace(/\s+stroke-linejoin="[a-z]+"/g, "")
+
+  // 4c. Drop exact-duplicate drawing elements. Illustrator's "PDF Compatible"
+  //     stream can retain history — the same path painted more than once with
+  //     identical geometry and transform. With the class attributes stripped
+  //     above, such duplicates are byte-identical, so keep the first occurrence
+  //     of each element and remove the rest. Only exact matches are removed:
+  //     paths that differ in `d` or `transform` (a nudged copy, a distinct
+  //     shape) are always preserved, and the pass is a no-op once deduped.
+  {
+    const drawRe = new RegExp(`<(?:${DRAW_ELEMENTS.join("|")})\\b[^>]*/>`, "g")
+    const seen = new Set()
+    svg = svg.replace(drawRe, (el) => {
+      const key = el.replace(/\s+/g, " ").trim()
+      if (seen.has(key)) return ""
+      seen.add(key)
+      return el
+    })
+  }
 
   const classNames = config.variants[variant] || []
 

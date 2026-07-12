@@ -2,11 +2,12 @@
   "name": "nice-icons",
   "version": "1.2.1",
   "description": "A collection of SVG icons with stroke and fill variants",
-  "main": "index.js",
+  "main": "src/generated/index.js",
+  "types": "src/generated/index.d.ts",
   "type": "module",
   "scripts": {
-    "build": "node scripts/generateIndex.js",
-    "dev": "node scripts/generateIndex.js --watch",
+    "build": "node scripts/generateIndex/index.js",
+    "dev": "node scripts/generateIndex/index.js --watch",
     "prepublishOnly": "npm run build",
     "prepare": "npm run build"
   },
@@ -18,9 +19,8 @@
     "nice-icons"
   ],
   "files": [
-    "*/stroke.svg",
-    "*/fill.svg",
-    "index.js"
+    "src/generated",
+    "src/services"
   ],
   "repository": {
     "type": "git",
@@ -30,6 +30,29 @@
     "access": "public"
   },
   "peerDependencies": {},
-  "devDependencies": {},
-  "dependencies": {}
+  "devDependencies": {
+    "nice-svg-generator": "file:../svg-generator"
+  },
+  "dependencies": {
+    "nice-styles": "file:../styles"
+  },
+  "exports": {
+    ".": {
+      "types": "./src/generated/index.d.ts",
+      "default": "./src/generated/index.js"
+    },
+    "./catalog": {
+      "types": "./src/generated/catalog.d.ts",
+      "default": "./src/generated/catalog.js"
+    },
+    "./source": {
+      "types": "./src/generated/source.d.ts",
+      "default": "./src/generated/source.js"
+    },
+    "./get-icon": {
+      "types": "./src/services/getIcon.d.ts",
+      "default": "./src/services/getIcon.js"
+    },
+    "./*": "./src/generated/*"
+  }
 }

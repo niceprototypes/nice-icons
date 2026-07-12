@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <style>.no-fill{fill:none}.stroke{stroke:currentColor;stroke-width:1.5px;stroke-linecap:round;stroke-linejoin:round}</style>
+  <path class="no-fill stroke" d="M 0 0 L 4.349 4.349" transform="matrix(1,0,0,-1,10.6514,5.3486)"/>
+  <path class="no-fill stroke" d="M 0 0 L -2.491 0 L -2.491 2.491" transform="matrix(1,0,0,-1,13.0053,5.4857)"/>
+  <path class="no-fill stroke" d="M 0 0 L -4.349 -4.349" transform="matrix(1,0,0,-1,5.3486,10.6514)"/>
+  <path class="no-fill stroke" d="M 0 0 L 2.491 0 L 2.491 -2.491" transform="matrix(1,0,0,-1,2.9947,10.5143)"/>
+  <path class="no-fill stroke" d="M 0 0 L 4.349 -4.349" transform="matrix(1,0,0,-1,10.6514,10.6514)"/>
+  <path class="no-fill stroke" d="M 0 0 L 0 2.491 L 2.491 2.491" transform="matrix(1,0,0,-1,10.5143,13.0053)"/>
+  <path class="no-fill stroke" d="M 0 0 L -4.349 4.349" transform="matrix(1,0,0,-1,5.3486,5.3486)"/>
+  <path class="no-fill stroke" d="M 0 0 L 0 -2.491 L -2.491 -2.491" transform="matrix(1,0,0,-1,5.4857,2.9947)"/>
+</svg>

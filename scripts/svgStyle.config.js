@@ -8,14 +8,17 @@
  * so every icon ships self-contained and uniform, and the whole set is retuned
  * from this one file.
  *
- * `variants` maps a file variant (derived from `stroke.svg` / `fill.svg`) to the
- * ordered list of semantic classes applied to its drawing elements. `classes`
- * maps each semantic class to its CSS declarations, emitted into an inline
- * `<style>` in every SVG (the only styling that survives a raw `<img>`).
+ * `variants` maps a file variant (the svg filename stem — `base`, `fill`, `3d`, …)
+ * to the ordered list of semantic classes applied to its drawing elements.
+ * `base` is the default/required variant (formerly `stroke`): an outline drawn in
+ * `currentColor`. A variant with no entry here (e.g. a future `3d`) is scrubbed of
+ * Adobe artifacts but keeps its own authored styling. `classes` maps each semantic
+ * class to its CSS declarations, emitted into an inline `<style>` in every SVG (the
+ * only styling that survives a raw `<img>`).
  */
 export default {
   variants: {
-    stroke: ["no-fill", "stroke"],
+    base: ["no-fill", "stroke"],
     fill: ["fill"],
   },
   classes: {
