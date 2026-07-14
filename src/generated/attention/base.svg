@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 16 16">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
   <style>.no-fill{fill:none}.stroke{stroke:currentColor;stroke-width:1.5px;stroke-linecap:round;stroke-linejoin:round}</style>
-  <path class="no-fill stroke" d="M15,8c0,5.8-1.8,7-7,7s-7-1.8-7-7S2.2,1,8,1s7,1.2,7,7Z"/>
-  <line class="no-fill stroke" x1="8" y1="4.5" x2="8" y2="8.2"/>
-  <circle class="no-fill stroke" cx="8" cy="11.3" r=".2"/>
+  <path class="no-fill stroke" d="M 0 0 L 0 -2" transform="matrix(1,0,0,-1,8,6.4)"/>
+  <path class="no-fill stroke" d="M 0 0 L 0 -0.2" transform="matrix(1,0,0,-1,8,11)"/>
+  <path class="no-fill stroke" d="M 0 0 L -11.804 0 C -12.619 0 -13.149 0.735 -12.785 1.361 L -6.883 11.48 C -6.479 12.173 -5.325 12.173 -4.921 11.48 L 0.981 1.361 C 1.345 0.735 0.815 0 0 0 Z" transform="matrix(1,0,0,-1,13.9019,14)"/>
+  <path class="no-fill stroke" d="M 0 0 L -11.804 0 C -12.619 0 -13.149 0.699 -12.785 1.293 L -6.883 10.911 C -6.479 11.569 -5.325 11.569 -4.921 10.911 L 0.981 1.293 C 1.345 0.699 0.815 0 0 0 Z" transform="matrix(1,0,0,-1,13.902,13.7024)"/>
 </svg>
