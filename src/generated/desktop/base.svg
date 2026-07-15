@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
   <style>.no-fill{fill:none}.stroke{stroke:currentColor;stroke-width:1.5px;stroke-linecap:round;stroke-linejoin:round}</style>
-  <path class="no-fill stroke" d="M 0 0 L -12 0 C -12.552 0 -13 0.448 -13 1 L -13 10.416 C -13 10.968 -12.552 11.416 -12 11.416 L 0 11.416 C 0.552 11.416 1 10.968 1 10.416 L 1 1 C 1 0.448 0.552 0 0 0 Z" transform="matrix(1,0,0,-1,14,12.4159)"/>
-  <path class="no-fill stroke" d="M 0 0 L 14 0" transform="matrix(1,0,0,-1,1,9.9727)"/>
-  <path class="no-fill stroke" d="M 0 0 L -1.73 -2.584 L 1.361 -2.584 L 4.453 -2.584 L 2.722 0" transform="matrix(1,0,0,-1,6.6388,12.4159)"/>
+  <path class="no-fill stroke" d="M 0 0 L -12 0 C -12.552 0 -13 0.448 -13 1 L -13 9.15 C -13 9.702 -12.552 10.15 -12 10.15 L 0 10.15 C 0.552 10.15 1 9.702 1 9.15 L 1 1 C 1 0.448 0.552 0 0 0 Z" transform="matrix(1,0,0,-1,14,12.15)"/>
+  <path class="no-fill stroke" d="M 0 0 L 1 0" transform="matrix(1,0,0,-1,7.5,4.25)"/>
+  <path class="no-fill stroke" d="M 0 0 L 2 0 L 4 0" transform="matrix(1,0,0,-1,6,14.75)"/>
+  <path class="no-fill stroke" d="M 0 0 L 0 2.6" transform="matrix(1,0,0,-1,8,14.75)"/>
 </svg>

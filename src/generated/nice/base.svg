@@ -1,13 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
   <style>.no-fill{fill:none}.stroke{stroke:currentColor;stroke-width:1.5px;stroke-linecap:round;stroke-linejoin:round}</style>
-  <path class="no-fill stroke" d="M 0 0 L 3.371 1.577 L 7 0 L 6.327 -3.823 L 0 -8.604 L -6.327 -3.823 L -7 0 L -3.371 1.577 L 0 0 Z" transform="matrix(1,0,0,-1,8,4.4864)"/>
-  <path class="no-fill stroke" d="M 0 0 L 3.472 1.905" transform="matrix(1,0,0,-1,4.5277,6.3912)"/>
-  <path class="no-fill stroke" d="M 0 0 L 3.528 -1.905" transform="matrix(1,0,0,-1,1,4.4864)"/>
-  <path class="no-fill stroke" d="M 0 0 L 0.245 -4.261" transform="matrix(1,0,0,-1,4.5277,6.3912)"/>
-  <path class="no-fill stroke" d="M 0 0 L 3.227 1.865" transform="matrix(1,0,0,-1,4.773,10.6521)"/>
-  <path class="no-fill stroke" d="M 0 0 L 0 -4.301" transform="matrix(1,0,0,-1,8,4.4864)"/>
-  <path class="no-fill stroke" d="M 0 0 L -3.472 1.905" transform="matrix(1,0,0,-1,11.4723,6.3912)"/>
-  <path class="no-fill stroke" d="M 0 0 L -3.528 -1.905" transform="matrix(1,0,0,-1,15,4.4864)"/>
-  <path class="no-fill stroke" d="M 0 0 L -0.246 -4.261" transform="matrix(1,0,0,-1,11.4723,6.3912)"/>
-  <path class="no-fill stroke" d="M 0 0 L -3.226 1.865" transform="matrix(1,0,0,-1,11.2261,10.6521)"/>
+  <path class="no-fill stroke" d="M 0 0 L 2.797 -1.903 C 3.164 -2.138 3.622 -2.107 3.96 -1.823 L 6.505 0.309 C 6.612 0.398 6.684 0.528 6.707 0.674 L 6.992 4.463 C 7.034 4.729 6.906 4.992 6.683 5.1 L 3.772 6.655 C 3.633 6.722 3.475 6.719 3.339 6.648 L 0 4.849 L -3.339 6.648 C -3.475 6.719 -3.633 6.722 -3.772 6.655 L -6.683 5.1 C -6.906 4.992 -7.034 4.729 -6.992 4.463 L -6.707 0.674 C -6.684 0.528 -6.612 0.398 -6.505 0.309 L -3.96 -1.823 C -3.622 -2.107 -3.164 -2.138 -2.797 -1.903 L 0 0 Z" transform="matrix(1,0,0,-1,8,9.2034)"/>
+  <path class="no-fill stroke" d="M 0 0 L -0.046 4.984 L 3.404 6.909 L 6.854 4.984 L 6.809 0" transform="matrix(1,0,0,-1,4.5956,11.2632)"/>
+  <path class="no-fill stroke" d="M 0 0 L -3.484 1.921" transform="matrix(1,0,0,-1,4.55,6.2797)"/>
+  <path class="no-fill stroke" d="M 0 0 L 3.484 1.921" transform="matrix(1,0,0,-1,11.45,6.2797)"/>
+  <path class="no-fill stroke" d="M 0 0 L 0 -4.849" transform="matrix(1,0,0,-1,8,4.3544)"/>
+  <path class="no-fill stroke" d="M 0 0 L -3.54 -2.371 C -3.807 -2.507 -4.114 -2.507 -4.38 -2.371 L -7.92 0" transform="matrix(1,0,0,-1,11.9602,11.0269)"/>
 </svg>

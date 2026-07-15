@@ -80,6 +80,8 @@ export { default as HomeBaseIcon } from "./home/base.svg";
 export { default as HomeFillIcon } from "./home/fill.svg";
 export { default as ImageBaseIcon } from "./image/base.svg";
 export { default as ImageFillIcon } from "./image/fill.svg";
+export { default as InfoBaseIcon } from "./info/base.svg";
+export { default as InfoFillIcon } from "./info/fill.svg";
 export { default as LaptopBaseIcon } from "./laptop/base.svg";
 export { default as LaptopFillIcon } from "./laptop/fill.svg";
 export { default as LightbulbBaseIcon } from "./lightbulb/base.svg";

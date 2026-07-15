@@ -84,6 +84,8 @@ export const HomeBaseIcon: SvgComponent;
 export const HomeFillIcon: SvgComponent;
 export const ImageBaseIcon: SvgComponent;
 export const ImageFillIcon: SvgComponent;
+export const InfoBaseIcon: SvgComponent;
+export const InfoFillIcon: SvgComponent;
 export const LaptopBaseIcon: SvgComponent;
 export const LaptopFillIcon: SvgComponent;
 export const LightbulbBaseIcon: SvgComponent;

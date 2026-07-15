@@ -40,6 +40,7 @@ export const iconNames: readonly [
   "heart",
   "home",
   "image",
+  "info",
   "laptop",
   "lightbulb",
   "link",
