@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 16 16">
-  <style>.no-fill{fill:none}.stroke{stroke:#7d8590;stroke-width:1.5px;stroke-linecap:round;stroke-linejoin:round}</style>
+  <style>.no-fill{fill:none}.stroke{stroke:#000000;stroke-width:1.5px;stroke-linecap:round;stroke-linejoin:round}</style>
   <g transform="rotate(90 8 8)">
   <polyline class="no-fill stroke" points="4.5 1 11.5 8 4.5 15"/>
 </g>

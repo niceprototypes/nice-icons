@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 16 16">
-  <style>.no-fill{fill:none}.stroke{stroke:#7d8590;stroke-width:1.5px;stroke-linecap:round;stroke-linejoin:round}</style>
+  <style>.no-fill{fill:none}.stroke{stroke:#000000;stroke-width:1.5px;stroke-linecap:round;stroke-linejoin:round}</style>
   <rect class="no-fill stroke" x="2.5" y="1" width="12.5" height="14" rx="2" ry="2"/>
   <line class="no-fill stroke" x1="4" y1="4.2" x2="1" y2="4.2"/>
   <line class="no-fill stroke" x1="4" y1="8" x2="1" y2="8"/>
