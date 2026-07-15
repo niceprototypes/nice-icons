@@ -87,8 +87,14 @@ export function convertAiSources(target = "") {
     }
 
     fs.mkdirSync(path.dirname(svgPath), { recursive: true })
+    // Fill icons are semantically all-fill; keep only filled paths so a stroked
+    // construction copy left in a fill.ai is dropped. Stroke variants aren't
+    // paint-filtered (they may carry a source-fill the scrub renders as an
+    // outline) — the converter's overlap-dedup handles their leftover copies.
+    const variant = path.basename(aiPath).replace(/\.ai$/i, "")
+    const keep = variant === "fill" ? "fill" : undefined
     try {
-      fs.writeFileSync(svgPath, convert(fs.readFileSync(aiPath), "ai"))
+      fs.writeFileSync(svgPath, convert(fs.readFileSync(aiPath), "ai", { keep }))
     } catch (err) {
       // convert() throws a clear message on unsupported (non-basic-shape) content.
       throw new Error(`AI→SVG conversion failed on ${rel}: ${err.message}`)
