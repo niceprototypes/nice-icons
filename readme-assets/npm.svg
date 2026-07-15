@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <style>.no-fill{fill:none}.stroke{stroke:#7d8590;stroke-width:1.5px;stroke-linecap:round;stroke-linejoin:round}</style>
+  <path class="no-fill stroke" d="M 13 3 L 3 3 L 3 13 L 13 13 Z" transform="matrix(1,0,0,-1,0,16)"/>
+  <path class="no-fill stroke" d="M 0 0 L 0 -6.364" transform="matrix(1,0,0,-1,9.512,6.6357)"/>
+</svg>

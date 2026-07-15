@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <style>.no-fill{fill:none}.stroke{stroke:#7d8590;stroke-width:1.5px;stroke-linecap:round;stroke-linejoin:round}</style>
+  <path class="no-fill stroke" d="M 0 0 L 3.371 1.577 L 7 0 L 6.327 -3.823 L 0 -8.604 L -6.327 -3.823 L -7 0 L -3.371 1.577 L 0 0 Z" transform="matrix(1,0,0,-1,8,4.4864)"/>
+  <path class="no-fill stroke" d="M 0 0 L 3.472 1.905" transform="matrix(1,0,0,-1,4.5277,6.3912)"/>
+  <path class="no-fill stroke" d="M 0 0 L 3.528 -1.905" transform="matrix(1,0,0,-1,1,4.4864)"/>
+  <path class="no-fill stroke" d="M 0 0 L 0.245 -4.261" transform="matrix(1,0,0,-1,4.5277,6.3912)"/>
+  <path class="no-fill stroke" d="M 0 0 L 3.227 1.865" transform="matrix(1,0,0,-1,4.773,10.6521)"/>
+  <path class="no-fill stroke" d="M 0 0 L 0 -4.301" transform="matrix(1,0,0,-1,8,4.4864)"/>
+  <path class="no-fill stroke" d="M 0 0 L -3.472 1.905" transform="matrix(1,0,0,-1,11.4723,6.3912)"/>
+  <path class="no-fill stroke" d="M 0 0 L -3.528 -1.905" transform="matrix(1,0,0,-1,15,4.4864)"/>
+  <path class="no-fill stroke" d="M 0 0 L -0.246 -4.261" transform="matrix(1,0,0,-1,11.4723,6.3912)"/>
+  <path class="no-fill stroke" d="M 0 0 L -3.226 1.865" transform="matrix(1,0,0,-1,11.2261,10.6521)"/>
+</svg>
