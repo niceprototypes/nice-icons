@@ -10,14 +10,15 @@ import * as fs from "fs"
 import * as path from "path"
 import { scrubSvgFile } from "../scrubSvg.js"
 import { rootDir, getIcons, findMissingBase, formatMissingBase } from "./icons.js"
-import {
-  generateIndexContent,
-  generateCatalogContent,
-  generateCatalogTypes,
-  generateTypesContent,
-  generateSourceContent,
-  generateSourceTypes,
-} from "./generate.js"
+import { generateIndexContent } from "./generateIndexContent.js"
+import { generateCatalogContent } from "./generateCatalogContent.js"
+import { generateCatalogTypes } from "./generateCatalogTypes.js"
+import { generateTypesContent } from "./generateTypesContent.js"
+import { generateSourceContent } from "./generateSourceContent.js"
+import { generateSourceTypes } from "./generateSourceTypes.js"
+import { buildBase64Map } from "./buildBase64Map.js"
+import { serializeBase64Module } from "./serializeBase64Module.js"
+import { generateBase64Types } from "./generateBase64Types.js"
 
 /**
  * Scrub every icon SVG in place (strip Adobe artifacts, apply semantic classes
@@ -62,7 +63,26 @@ export function writeIndex() {
   fs.writeFileSync(path.join(rootDir, "index.d.ts"), generateTypesContent(icons), "utf-8")
   fs.writeFileSync(path.join(rootDir, "source.js"), generateSourceContent(icons), "utf-8")
   fs.writeFileSync(path.join(rootDir, "source.d.ts"), generateSourceTypes(), "utf-8")
-  console.log(`✓ Generated index + catalog + source (js/d.ts) with ${icons.length} icons`)
+
+  // Encoded surface: the SVG-base64 data-URI map (color baked to base/#000,
+  // night/#fff), written both as one index module (base64.js — set consumption,
+  // read by getIconEncoded) and per-icon {name}/base64.json (individual
+  // consumption). The per-icon files land inside icon folders; the icon-folder
+  // watcher only reacts to .svg, so these writes don't retrigger it.
+  const base64Map = buildBase64Map(icons)
+  fs.writeFileSync(path.join(rootDir, "base64.js"), serializeBase64Module(base64Map), "utf-8")
+  fs.writeFileSync(path.join(rootDir, "base64.d.ts"), generateBase64Types(), "utf-8")
+  for (const { name } of icons) {
+    fs.writeFileSync(
+      path.join(rootDir, name, "base64.json"),
+      `${JSON.stringify(base64Map[name], null, 2)}\n`,
+      "utf-8"
+    )
+  }
+
+  console.log(
+    `✓ Generated index + catalog + source + base64 (js/d.ts) with ${icons.length} icons`
+  )
 }
 
 /**

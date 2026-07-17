@@ -142,6 +142,8 @@ export { default as TrashBaseIcon } from "./trash/base.svg";
 export { default as TrashFillIcon } from "./trash/fill.svg";
 export { default as UploadBaseIcon } from "./upload/base.svg";
 export { default as UploadFillIcon } from "./upload/fill.svg";
+export { default as WatchBaseIcon } from "./watch/base.svg";
+export { default as WatchFillIcon } from "./watch/fill.svg";
 export { default as XBaseIcon } from "./x/base.svg";
 export { default as XFillIcon } from "./x/fill.svg";
 export { default as YoutubeBaseIcon } from "./youtube/base.svg";

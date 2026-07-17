@@ -49,9 +49,17 @@
       "types": "./src/generated/source.d.ts",
       "default": "./src/generated/source.js"
     },
+    "./base64": {
+      "types": "./src/generated/base64.d.ts",
+      "default": "./src/generated/base64.js"
+    },
     "./get-icon": {
       "types": "./src/services/getIcon.d.ts",
       "default": "./src/services/getIcon.js"
+    },
+    "./get-icon-encoded": {
+      "types": "./src/services/getIconEncoded.d.ts",
+      "default": "./src/services/getIconEncoded.js"
     },
     "./*": "./src/generated/*"
   }

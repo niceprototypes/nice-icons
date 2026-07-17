@@ -71,6 +71,7 @@ export const iconNames: readonly [
   "tablet",
   "trash",
   "upload",
+  "watch",
   "x",
   "youtube",
   "zendesk",

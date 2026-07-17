@@ -14,10 +14,10 @@
  * the generator throws if one is missing.
  *
  * The generator is split across this folder:
- * - ./icons.js     — filesystem discovery + SVG reads
- * - ./generate.js  — content builders (pure string producers)
- * - ./write.js     — scrub + write the generated files
- * - ./watchMode.js — watch + regenerate
+ * - ./icons.js               — filesystem discovery + SVG reads
+ * - ./generate{Thing}.js     — content builders, one pure string producer per file
+ * - ./write.js               — scrub + write the generated files
+ * - ./watchMode.js           — watch + regenerate
  *
  * ## Usage
  * - Build:   node scripts/generateIndex/index.js

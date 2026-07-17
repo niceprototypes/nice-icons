@@ -146,6 +146,8 @@ export const TrashBaseIcon: SvgComponent;
 export const TrashFillIcon: SvgComponent;
 export const UploadBaseIcon: SvgComponent;
 export const UploadFillIcon: SvgComponent;
+export const WatchBaseIcon: SvgComponent;
+export const WatchFillIcon: SvgComponent;
 export const XBaseIcon: SvgComponent;
 export const XFillIcon: SvgComponent;
 export const YoutubeBaseIcon: SvgComponent;
