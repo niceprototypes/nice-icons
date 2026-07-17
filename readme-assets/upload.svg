@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 16 16">
-  <style>.no-fill{fill:none}.stroke{stroke:#000000;stroke-width:1.5px;stroke-linecap:round;stroke-linejoin:round}</style>
-  <polyline class="no-fill stroke" points="11 4 8 1 5 4"/>
-  <line class="no-fill stroke" x1="8" y1="9.6" x2="8" y2="1"/>
-  <path class="no-fill stroke" d="M15,9.7v3.3c0,1.1-.9,2-2,2H3c-1.1,0-2-.9-2-2v-3.3"/>
-</svg>

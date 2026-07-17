@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 16 16">
-  <style>.no-fill{fill:none}.stroke{stroke:#000000;stroke-width:1.5px;stroke-linecap:round;stroke-linejoin:round}</style>
-  <circle class="no-fill stroke" cx="8" cy="8" r="7"/>
-  <line class="no-fill stroke" x1="3.1" y1="12.9" x2="12.9" y2="3.1"/>
-</svg>
