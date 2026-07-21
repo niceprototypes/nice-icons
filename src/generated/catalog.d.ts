@@ -29,6 +29,7 @@ export const iconNames: readonly [
   "desktop",
   "discord",
   "download",
+  "earth",
   "edit",
   "eraser",
   "expand",

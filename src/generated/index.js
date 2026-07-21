@@ -58,6 +58,8 @@ export { default as DiscordBaseIcon } from "./discord/base.svg";
 export { default as DiscordFillIcon } from "./discord/fill.svg";
 export { default as DownloadBaseIcon } from "./download/base.svg";
 export { default as DownloadFillIcon } from "./download/fill.svg";
+export { default as EarthBaseIcon } from "./earth/base.svg";
+export { default as EarthFillIcon } from "./earth/fill.svg";
 export { default as EditBaseIcon } from "./edit/base.svg";
 export { default as EditFillIcon } from "./edit/fill.svg";
 export { default as EraserBaseIcon } from "./eraser/base.svg";

@@ -62,6 +62,8 @@ export const DiscordBaseIcon: SvgComponent;
 export const DiscordFillIcon: SvgComponent;
 export const DownloadBaseIcon: SvgComponent;
 export const DownloadFillIcon: SvgComponent;
+export const EarthBaseIcon: SvgComponent;
+export const EarthFillIcon: SvgComponent;
 export const EditBaseIcon: SvgComponent;
 export const EditFillIcon: SvgComponent;
 export const EraserBaseIcon: SvgComponent;
