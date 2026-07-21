@@ -1,9 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 16 16">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
   <style>.no-fill{fill:none}.stroke{stroke:currentColor;stroke-width:1.5px;stroke-linecap:round;stroke-linejoin:round}</style>
-  <g transform="rotate(-90 8 8)">
-  <line class="no-fill stroke" x1="1" y1="8" x2="15" y2="8"/>
-  <line class="no-fill stroke" x1="8" y1="1" x2="15" y2="8"/>
-  <line class="no-fill stroke" x1="8" y1="15" x2="15" y2="8"/>
-</g>
+  <path class="no-fill stroke" d="M 0 0 L 0 14" transform="matrix(1,0,0,-1,8,15)"/>
+  <path class="no-fill stroke" d="M 0 0 L 6.261 6.261 L 12.522 0" transform="matrix(1,0,0,-1,1.7392,7.2608)"/>
 </svg>

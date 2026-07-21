@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 16 16">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
   <style>.no-fill{fill:none}.stroke{stroke:currentColor;stroke-width:1.5px;stroke-linecap:round;stroke-linejoin:round}</style>
-  <g transform="rotate(90 8 8)">
-  <polyline class="no-fill stroke" points="4.5 1 11.5 8 4.5 15"/>
-</g>
+  <path class="no-fill stroke" d="M 0 0 L -6.261 -6.261 L -12.522 0" transform="matrix(1,0,0,-1,14.2608,5.3696)"/>
 </svg>

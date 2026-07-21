@@ -1,7 +1,17 @@
+import type { iconNames } from "../generated/catalog"
+
+/**
+ * Every registered icon name — the literal union derived from the generated
+ * catalog. Passing a name outside this set is a compile error, so a typo like
+ * `"arrow-down"` (the real name is `"arrow-bottom"`) is caught before it becomes
+ * a silent `undefined` at runtime.
+ */
+export type IconName = (typeof iconNames)[number]
+
 /** Encoding options for the base64 icon accessors. */
 export interface GetIconEncodedOptions {
   /** Color theme: "base" (#000) or "night" (#fff). Default "base". */
-  theme?: string
+  theme?: "base" | "night"
 }
 
 /**
@@ -14,7 +24,7 @@ export interface GetIconEncodedOptions {
  * `undefined`.
  */
 export function getIconEncoded(
-  name: string,
+  name: IconName,
   variant?: string,
   options?: GetIconEncodedOptions
 ): string | undefined
@@ -25,7 +35,7 @@ export function getIconEncoded(
  * `undefined` for an unknown name.
  */
 export function getIconEncodedKey(
-  name: string,
+  name: IconName,
   variant?: string,
   options?: GetIconEncodedOptions
 ): string | undefined
