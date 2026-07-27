@@ -1,24 +1,20 @@
 /**
- * Icon discovery — scan the flat icon set under `src/generated/` and read its
- * SVG markup. Every function here is filesystem-facing (internal to the
- * generator); the content builders in ./generate.js consume their output.
+ * Asset discovery — scan a flat asset set (icons under `src/icons/generated/`,
+ * illustrations under `src/illustrations/generated/`) and read its SVG markup.
+ * Every function here is filesystem-facing (internal to the generator); the
+ * content builders in ./generate*.js consume their output.
+ *
+ * The functions are surface-agnostic: pass the surface's generated dir as
+ * `rootDir`. See ./targets.js for the icon/illustration surface descriptors.
  *
  * @module generateIndex/icons
  */
 
 import * as fs from "fs"
 import * as path from "path"
-import { fileURLToPath } from "url"
-import { dirname } from "path"
-
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname(__filename)
-// The generated icon set (SVGs + index) lives under src/generated/; this module
-// sits in scripts/generateIndex/, so go up two levels then into src/generated.
-export const rootDir = path.join(__dirname, "..", "..", "src", "generated")
 
 /**
- * Convert icon name to PascalCase export name
+ * Convert an asset name to PascalCase export name
  * e.g., "arrow" -> "Arrow", "some-icon" -> "SomeIcon"
  */
 export function toPascalCase(str) {
@@ -29,7 +25,7 @@ export function toPascalCase(str) {
 }
 
 /**
- * List the variants present in an icon folder — the svg filename stems (`base`,
+ * List the variants present in an asset folder — the svg filename stems (`base`,
  * `fill`, `3d`, …), sorted with `base` first (it is the default/required variant)
  * and the rest alphabetical. Variants are open-ended: any `{stem}.svg` counts.
  */
@@ -43,13 +39,14 @@ export function getVariants(dir) {
 }
 
 /**
- * All icons, as `{ name, variants }`, sorted by name. The `name` is the icon
- * folder name — the public identifier; `variants` is the folder's svg stems
- * (base first). Any directory directly under `src/generated/` that holds at least
- * one svg is an icon; everything else (the generated .js/.d.ts files, hidden
- * folders) is ignored.
+ * All assets under `rootDir`, as `{ name, variants }`, sorted by name. The `name`
+ * is the asset folder name — the public identifier; `variants` is the folder's
+ * svg stems (base first). Any directory directly under `rootDir` that holds at
+ * least one svg is an asset; everything else (the generated .js/.d.ts files,
+ * hidden folders) is ignored. Returns `[]` when `rootDir` doesn't exist yet.
  */
-export function getIcons() {
+export function getIcons(rootDir) {
+  if (!fs.existsSync(rootDir)) return []
   const icons = []
   for (const entry of fs.readdirSync(rootDir, { withFileTypes: true })) {
     if (!entry.isDirectory()) continue
@@ -61,8 +58,8 @@ export function getIcons() {
 }
 
 /**
- * Icons missing the required `base` variant. `base` is the default an `<Icon>`
- * falls back to, so an icon folder that has variant svgs (e.g. `fill.svg`) but no
+ * Assets missing the required `base` variant. `base` is the default an `<Icon>`
+ * falls back to, so a folder that has variant svgs (e.g. `fill.svg`) but no
  * `base.svg` is invalid and must be fixed (add base.svg / convert base.ai).
  */
 export function findMissingBase(icons) {
@@ -77,12 +74,12 @@ export function formatMissingBase(missing) {
 }
 
 /**
- * Read an icon variant's SVG markup, ready for inline injection: the `<?xml …?>`
+ * Read an asset variant's SVG markup, ready for inline injection: the `<?xml …?>`
  * prolog (never useful inside HTML) is stripped and surrounding whitespace
- * trimmed. The embedded `<style>` and element classes are kept — the vanilla
- * `getIcon` needs them to render custom variants untouched.
+ * trimmed. The embedded `<style>`/element classes (icons) and literal fills
+ * (illustrations) are kept — the vanilla getters need them to render untouched.
  */
-export function readIconSvg(name, variant) {
+export function readIconSvg(rootDir, name, variant) {
   const raw = fs.readFileSync(path.join(rootDir, name, `${variant}.svg`), "utf-8")
   return raw.replace(/<\?xml[^>]*\?>\s*/i, "").trim()
 }

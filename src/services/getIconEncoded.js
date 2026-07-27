@@ -1,4 +1,4 @@
-import { iconBase64 } from "../generated/base64.js"
+import { iconBase64 } from "../icons/generated/base64.js"
 
 /**
  * Resolve an icon's encoded data-URI from the generated `iconBase64` map,

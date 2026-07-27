@@ -140,6 +140,37 @@ export function scrubSvgFile(filePath) {
   return true
 }
 
+/**
+ * Scrub an illustration SVG — the color-preserving counterpart to `scrubSvg`.
+ *
+ * Illustrations carry authored, fixed colors (the AI converter emits them with
+ * `color: true`), so unlike icons they must NOT be recolored: no `<style>`/fill
+ * stripping, no semantic classes. This only removes the Adobe artifacts that
+ * are never wanted inline — the generator comment, `id="Layer_1"`, and the
+ * `<?xml …?>` prolog — and normalizes trailing whitespace. Every fill, stroke,
+ * and `<style>` is left untouched. Pure + idempotent (re-running is a no-op).
+ */
+export function scrubIllustration(content) {
+  return content
+    .replace(/<!--[\s\S]*?-->/g, "")
+    .replace(/<\?xml[^>]*\?>\s*/i, "")
+    .replace(/\s+id="Layer_1"/g, "")
+    .replace(/[ \t]*\n(?:[ \t]*\n)+/g, "\n")
+    .replace(/\s*$/, "\n")
+}
+
+/**
+ * Scrub an illustration file on disk (color-preserving). Write-only-on-change,
+ * so already-clean files are skipped. Returns true if the file was rewritten.
+ */
+export function scrubIllustrationFile(filePath) {
+  const original = fs.readFileSync(filePath, "utf-8")
+  const scrubbed = scrubIllustration(original)
+  if (scrubbed === original) return false
+  fs.writeFileSync(filePath, scrubbed, "utf-8")
+  return true
+}
+
 // CLI: print to stdout, or rewrite in place with --write.
 const isMain = process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]
 if (isMain) {

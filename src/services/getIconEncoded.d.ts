@@ -1,4 +1,4 @@
-import type { iconNames } from "../generated/catalog"
+import type { iconNames } from "../icons/generated/catalog"
 
 /**
  * Every registered icon name — the literal union derived from the generated

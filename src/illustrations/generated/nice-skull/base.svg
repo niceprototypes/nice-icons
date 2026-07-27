@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <path d="M 0 0 L -3.789 -0.859 L -2.083 -4.907 Z" fill="#c8f2fb" transform="matrix(1,0,0,-1,8,1)"/>
+  <path d="M 0 0 L -1.823 -2.136 L 1.706 -4.048 Z" fill="#9cf8e6" transform="matrix(1,0,0,-1,4.2124,1.8593)"/>
+  <path d="M 0 0 L -3.529 1.912 L -2.511 -2.208 Z" fill="#75f0d0" transform="matrix(1,0,0,-1,5.9183,5.9074)"/>
+  <path d="M 0 0 L 0.269 1.638 L 2.352 -0.571 L 1.257 -0.906 Z" fill="#9dd5fd" transform="matrix(1,0,0,-1,5.6495,7.5452)"/>
+  <path d="M 0 0 L -0.269 -1.638 L -2.511 -2.208 Z" fill="#a3e4fc" transform="matrix(1,0,0,-1,5.9183,5.9074)"/>
+  <path d="M 0 0 L 0.389 2.775 L 1.408 -1.345 Z" fill="#49edbe" transform="matrix(1,0,0,-1,2,6.771)"/>
+  <path d="M 0 0 L 0 -1.251 L -0.579 -2.01 L -1.679 -2.01 L -1.095 -0.336 Z" fill="#bce3fd" transform="matrix(1,0,0,-1,8.0012,8.1158)"/>
+  <path d="M 0 0 L -0.584 -1.674 L -1.257 0.906 Z" fill="#1070df" transform="matrix(1,0,0,-1,6.9063,8.4516)"/>
+  <path d="M 0 0 L 2.242 0.571 L 2.914 -2.01 L 0.426 -2.507 Z" fill="#21a1fd" transform="matrix(1,0,0,-1,3.4076,8.1158)"/>
+  <path d="M 0 0 L -0.828 -1.965 L -1.408 1.345 Z" fill="#03dcf2" transform="matrix(1,0,0,-1,3.4076,8.1158)"/>
+  <path d="M 0 0 L 1.255 -0.543 L 0.828 1.965 Z" fill="#7adbfd" transform="matrix(1,0,0,-1,2.5792,10.0804)"/>
+  <path d="M 0 0 L 1.482 -0.009 L 0.228 0.534 Z" fill="#aae5fc" transform="matrix(1,0,0,-1,2.3517,10.6144)"/>
+  <path d="M 0 0 L 0.21 1.67 L 2.698 2.168 Z" fill="#94d8fd" transform="matrix(1,0,0,-1,3.6237,12.293)"/>
+  <path d="M 0 0 L 1.1 0 L 0.55 -1.743 Z" fill="#a0d2fd" transform="matrix(1,0,0,-1,6.322,10.1255)"/>
+  <path d="M 0 0 L -2.698 -2.168 L -1.322 -2.635 L -0.646 -3.392 L 0.55 -1.743 Z" fill="#81c9fc" transform="matrix(1,0,0,-1,6.322,10.1255)"/>
+  <path d="M 0 0 L 0.579 0.759 L 0.579 -1.798 L 0.069 -2.168 L -0.55 -1.743 Z" fill="#3451da" transform="matrix(1,0,0,-1,7.4222,10.1255)"/>
+  <path d="M 0 0 L 0.466 -0.523 L 0.466 0.35 L -0.209 1.107 Z" fill="#2f93f7" transform="matrix(1,0,0,-1,5.2092,13.867)"/>
+  <path d="M 0 0 L 0 -1.043 L 0.75 -1.181 L 0.75 0.041 L 0.389 0.116 Z" fill="#81c9fc" transform="matrix(1,0,0,-1,7.2513,13.8193)"/>
+  <path d="M 0 0 L 0 -0.977 L 0.547 -1.078 L 0.547 -0.035 L 0.239 0.065 Z" fill="#9adbfc" transform="matrix(1,0,0,-1,6.7041,13.7842)"/>
+  <path d="M 0 0 L 0.521 -0.095 L 0.521 0.882 L 0 1.096 Z" fill="#81c9fc" transform="matrix(1,0,0,-1,6.183,14.6662)"/>
+  <path d="M 0 0 L 0.508 -0.276 L 0.508 0.82 L 0 0.873 Z" fill="#8fd4ff" transform="matrix(1,0,0,-1,5.6754,14.3899)"/>
+  <path d="M 0 0 L 0.308 -0.1 L 0.696 0.016 L 1.057 -0.06 L 1.057 1.796 L 0.547 1.426 Z" fill="#9dccfc" transform="matrix(1,0,0,-1,6.9439,13.7194)"/>
+  <path d="M 0 0 L -1.197 -1.649 L -0.689 -1.701 L -0.168 -1.916 L 0.072 -1.851 L 0.619 -0.424 Z" fill="#a9d7fd" transform="matrix(1,0,0,-1,6.8721,11.8687)"/>
+  <path d="M 0 0 L 2.074 2.199 L -2.083 2.199 L -0.009 0 L -0.009 -0.01 L -0.005 -0.005 L 0 -0.01 Z" fill="#c2e1fd" transform="matrix(1,0,0,-1,8.0012,8.1062)"/>
+  <path d="M 0 0 L -2.082 -4.907 L 2.075 -4.907 Z" fill="#d7f3fd" transform="matrix(1,0,0,-1,8,1)"/>
+  <path d="M 0 0 L -1.272 1.679 L 0.21 1.67 Z" fill="#9be0fd" transform="matrix(1,0,0,-1,3.6237,12.293)"/>
+  <path d="M 0 0 L 3.788 -0.859 L 2.075 -4.907 Z" fill="#e6e7fa" transform="matrix(1,0,0,-1,8,1)"/>
+  <path d="M 0 0 L 1.823 -2.136 L -1.713 -4.048 Z" fill="#fcdbee" transform="matrix(1,0,0,-1,11.7876,1.8593)"/>
+  <path d="M 0 0 L 3.536 1.912 L 2.517 -2.208 Z" fill="#fdcece" transform="matrix(1,0,0,-1,10.075,5.9074)"/>
+  <path d="M 0 0 L -0.276 1.638 L -2.352 -0.571 L -1.257 -0.906 Z" fill="#c4c3fc" transform="matrix(1,0,0,-1,10.3505,7.5452)"/>
+  <path d="M 0 0 L 0.276 -1.638 L 2.517 -2.208 Z" fill="#f0ccf4" transform="matrix(1,0,0,-1,10.075,5.9074)"/>
+  <path d="M 0 0 L -0.389 2.775 L -1.408 -1.345 Z" fill="#f8babf" transform="matrix(1,0,0,-1,14,6.771)"/>
+  <path d="M 0 0 L 0 -1.251 L 0.579 -2.01 L 1.679 -2.01 L 1.095 -0.336 Z" fill="#dcd4fd" transform="matrix(1,0,0,-1,7.9988,8.1158)"/>
+  <path d="M 0 0 L 0.584 -1.674 L 1.257 0.906 Z" fill="#5e50e3" transform="matrix(1,0,0,-1,9.0937,8.4516)"/>
+  <path d="M 0 0 L -2.242 0.571 L -2.914 -2.01 L -0.426 -2.507 Z" fill="#7666f9" transform="matrix(1,0,0,-1,12.5924,8.1158)"/>
+  <path d="M 0 0 L 0.828 -1.965 L 1.408 1.345 Z" fill="#f69fd9" transform="matrix(1,0,0,-1,12.5924,8.1158)"/>
+  <path d="M 0 0 L -1.255 -0.543 L -0.828 1.965 Z" fill="#f9b9eb" transform="matrix(1,0,0,-1,13.4208,10.0804)"/>
+  <path d="M 0 0 L 1.482 0.009 L 1.255 0.543 Z" fill="#f5c7f6" transform="matrix(1,0,0,-1,12.1662,10.6234)"/>
+  <path d="M 0 0 L -0.21 1.67 L -2.698 2.168 Z" fill="#ddbbf9" transform="matrix(1,0,0,-1,12.3763,12.293)"/>
+  <path d="M 0 0 L -1.1 0 L -0.55 -1.743 Z" fill="#c6b9fb" transform="matrix(1,0,0,-1,9.678,10.1255)"/>
+  <path d="M 0 0 L 2.698 -2.168 L 1.322 -2.635 L 0.646 -3.392 L -0.55 -1.743 Z" fill="#c1a7fb" transform="matrix(1,0,0,-1,9.678,10.1255)"/>
+  <path d="M 0 0 L -0.579 0.759 L -0.579 -1.798 L -0.069 -2.168 L 0.55 -1.743 Z" fill="#5c4be6" transform="matrix(1,0,0,-1,8.5778,10.1255)"/>
+  <path d="M 0 0 L 0 -0.873 L 0.466 -0.35 L 0.675 0.757 Z" fill="#8781fc" transform="matrix(1,0,0,-1,10.3248,13.5169)"/>
+  <path d="M 0 0 L 0 -1.221 L 0.75 -1.084 L 0.75 -0.041 L 0.361 0.076 Z" fill="#a9a9fc" transform="matrix(1,0,0,-1,7.9992,13.7788)"/>
+  <path d="M 0 0 L 0 -1.043 L 0.547 -0.942 L 0.547 0.035 L 0.307 0.1 Z" fill="#d0c5f9" transform="matrix(1,0,0,-1,8.7489,13.8193)"/>
+  <path d="M 0 0 L 0 -0.977 L 0.521 -0.882 L 0.521 0.214 Z" fill="#c1a7fb" transform="matrix(1,0,0,-1,9.2961,13.7842)"/>
+  <path d="M 0 0 L 0 -1.096 L 0.508 -0.82 L 0.508 0.053 Z" fill="#c6b4f9" transform="matrix(1,0,0,-1,9.8172,13.57)"/>
+  <path d="M 0 0 L -0.308 -0.1 L -0.696 0.016 L -1.057 -0.06 L -1.057 1.796 L -0.547 1.426 Z" fill="#bfbdfc" transform="matrix(1,0,0,-1,9.0561,13.7194)"/>
+  <path d="M 0 0 L 1.197 -1.649 L 0.689 -1.701 L 0.168 -1.916 L -0.072 -1.851 L -0.619 -0.424 Z" fill="#d0c8fc" transform="matrix(1,0,0,-1,9.1279,11.8687)"/>
+  <path d="M 0 0 L -1.272 -1.679 L -1.483 -0.009 Z" fill="#f3bff5" transform="matrix(1,0,0,-1,13.6487,10.6145)"/>
+</svg>

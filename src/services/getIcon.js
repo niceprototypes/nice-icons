@@ -1,5 +1,5 @@
 import { getComponentToken } from "nice-styles"
-import { iconSource } from "../generated/source.js"
+import { iconSource } from "../icons/generated/source.js"
 
 /**
  * Drawing elements whose fill/stroke `getIcon` overrides for the built-in

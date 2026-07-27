@@ -1,54 +1,63 @@
 /**
- * Watch mode — regenerate on icon add/remove and scrub-then-regenerate on SVG
- * edits. Kept separate from ./write.js so the one-shot build path stays free of
- * long-lived watchers.
+ * Watch mode — regenerate on asset add/remove and scrub-then-regenerate on SVG
+ * edits, across every surface (icons, illustrations). Kept separate from
+ * ./write.js so the one-shot build path stays free of long-lived watchers.
  *
  * @module generateIndex/watchMode
  */
 
 import * as fs from "fs"
 import * as path from "path"
-import { scrubSvgFile } from "../scrubSvg.js"
-import { rootDir, getIcons } from "./icons.js"
-import { scrubAllIcons, writeIndexSafe } from "./write.js"
+import { getIcons } from "./icons.js"
+import { scrubSurface, writeSurfaceSafe } from "./write.js"
+import { SURFACES } from "./targets.js"
+
+/** Watch for changes and regenerate, per surface. */
+export function watchMode() {
+  console.log("Watching for asset changes...")
+  for (const surface of SURFACES) {
+    scrubSurface(surface)
+    writeSurfaceSafe(surface)
+    watchSurface(surface)
+  }
+}
 
 /**
- * Watch for changes and regenerate. Watches the root for icon folders being
- * added or removed, and every icon folder for SVG edits.
+ * Watch one surface: the generatedDir for asset folders being added or removed,
+ * and every asset folder for SVG edits (scrubbing the just-saved file). No-op if
+ * the surface has no generatedDir yet.
  */
-export function watchMode() {
-  console.log("Watching for icon changes...")
-  scrubAllIcons()
-  writeIndexSafe()
+function watchSurface(surface) {
+  const { generatedDir, scrubFile, label } = surface
+  if (!fs.existsSync(generatedDir)) return
 
-  // Watch the root for icon folders being added or removed. The generated output
-  // files (index.js, catalog.js, *.d.ts) also live here — ignore their writes so
-  // regenerating doesn't retrigger the watcher.
-  fs.watch(rootDir, { recursive: false }, (_eventType, filename) => {
+  // Watch the root for asset folders being added or removed. The generated
+  // output files (index.js, catalog.js, *.d.ts) also live here — ignore their
+  // writes so regenerating doesn't retrigger the watcher.
+  fs.watch(generatedDir, { recursive: false }, (_eventType, filename) => {
     if (!filename || filename.startsWith(".")) return
     if (/\.(js|d\.ts)$/.test(filename)) return
-    console.log(`Icon directory changed: ${filename}`)
-    writeIndexSafe()
+    console.log(`${label} directory changed: ${filename}`)
+    writeSurfaceSafe(surface)
   })
 
-  // Watch each icon folder for SVG edits, scrubbing the just-saved file.
-  for (const { name } of getIcons()) {
-    const iconPath = path.join(rootDir, name)
-    fs.watch(iconPath, (_eventType, filename) => {
+  // Watch each asset folder for SVG edits, scrubbing the just-saved file. Writing
+  // a cleaned version triggers one more change event, but the scrub is idempotent
+  // so that pass is a no-op (identical content -> no write -> no further event).
+  for (const { name } of getIcons(generatedDir)) {
+    const assetPath = path.join(generatedDir, name)
+    fs.watch(assetPath, (_eventType, filename) => {
       if (!filename || !filename.endsWith(".svg")) return
-      // Scrub the just-saved file. Writing a cleaned version triggers one more
-      // change event, but the scrub is idempotent so that pass is a no-op
-      // (identical content -> no write -> no further event): no loop.
-      const filePath = path.join(iconPath, filename)
+      const filePath = path.join(assetPath, filename)
       try {
-        if (fs.existsSync(filePath) && scrubSvgFile(filePath)) {
-          console.log(`✓ Scrubbed ${name}/${filename}`)
+        if (fs.existsSync(filePath) && scrubFile(filePath)) {
+          console.log(`✓ Scrubbed ${label} ${name}/${filename}`)
         }
       } catch (err) {
-        console.error(`✗ Scrub failed for ${name}/${filename}: ${err.message}`)
+        console.error(`✗ Scrub failed for ${label} ${name}/${filename}: ${err.message}`)
       }
-      console.log(`SVG changed: ${name}/${filename}`)
-      writeIndexSafe()
+      console.log(`${label} SVG changed: ${name}/${filename}`)
+      writeSurfaceSafe(surface)
     })
   }
 }
