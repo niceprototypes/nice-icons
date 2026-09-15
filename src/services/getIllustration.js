@@ -1,4 +1,4 @@
-import { getComponentToken } from "nice-styles"
+import { getToken } from "nice-styles"
 import { illustrationSource } from "../illustrations/generated/source.js"
 
 /**
@@ -56,7 +56,7 @@ export function getIllustration(name, variant = "base", options = {}) {
   }
 
   const { size = "base", className, viewBox, style } = options
-  const sizeValue = getComponentToken("icon", { token: "size", variant: size })
+  const sizeValue = getToken("size", size, { prefix: "icon" })
 
   return setRootAttributes(svg, {
     width: sizeValue,

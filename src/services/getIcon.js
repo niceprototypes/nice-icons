@@ -1,4 +1,4 @@
-import { getComponentToken } from "nice-styles"
+import { getToken } from "nice-styles"
 import { iconSource } from "../icons/generated/source.js"
 
 /**
@@ -9,7 +9,7 @@ const DRAW_ELEMENTS = ["path", "rect", "circle", "ellipse", "polygon", "polyline
 
 /** Resolve an `icon` component token to its `var(--np--icon--…)` reference. */
 function iconToken(token, variant) {
-  return getComponentToken("icon", { token, variant })
+  return getToken(token, variant, { prefix: "icon" })
 }
 
 /**
