@@ -46,6 +46,7 @@ export const iconNames: readonly [
   "info",
   "laptop",
   "lightbulb",
+  "lightning",
   "link",
   "location",
   "lock",

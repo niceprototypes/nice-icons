@@ -96,6 +96,8 @@ export const LaptopBaseIcon: SvgComponent;
 export const LaptopFillIcon: SvgComponent;
 export const LightbulbBaseIcon: SvgComponent;
 export const LightbulbFillIcon: SvgComponent;
+export const LightningBaseIcon: SvgComponent;
+export const LightningFillIcon: SvgComponent;
 export const LinkBaseIcon: SvgComponent;
 export const LinkFillIcon: SvgComponent;
 export const LocationBaseIcon: SvgComponent;

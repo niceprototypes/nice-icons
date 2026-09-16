@@ -92,6 +92,8 @@ export { default as LaptopBaseIcon } from "./laptop/base.svg";
 export { default as LaptopFillIcon } from "./laptop/fill.svg";
 export { default as LightbulbBaseIcon } from "./lightbulb/base.svg";
 export { default as LightbulbFillIcon } from "./lightbulb/fill.svg";
+export { default as LightningBaseIcon } from "./lightning/base.svg";
+export { default as LightningFillIcon } from "./lightning/fill.svg";
 export { default as LinkBaseIcon } from "./link/base.svg";
 export { default as LinkFillIcon } from "./link/fill.svg";
 export { default as LocationBaseIcon } from "./location/base.svg";
