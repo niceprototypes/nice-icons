@@ -8,8 +8,7 @@
   "scripts": {
     "build": "node scripts/generateIndex/index.js",
     "dev": "node scripts/generateIndex/index.js --watch",
-    "prepublishOnly": "npm run build",
-    "prepare": "npm run build"
+    "prepublishOnly": "npm run build"
   },
   "author": "Nice Prototypes",
   "license": "MIT",
